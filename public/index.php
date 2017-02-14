@@ -5,20 +5,30 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../src/config/db.php';
 
-$app = new \Slim\App;
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
-
-    return $response;
+ActiveRecord\Config::initialize(function($cfg) {
+    $cfg->set_model_directory( __DIR__ . '/../src/models' );
+    $cfg->set_connections(array(
+        'development' => 'mysql://sgivestad:SokaStats%1@www.sgiv.org/sgivestad2'
+    ));
 });
 
-//Customer routes
-require __DIR__ . '/../src/routes/customers.php';
+$app = new \Slim\App;
 
-//Rutas de usuarios
-require __DIR__ . '/../src/routes/usuarios.php';
+$app->get('/', function ($request, $response) {
+    return $response->getBody()->write('API de clicSOKA .V1');
+});
+
+$app->group('/api', function () use ($app) {
+	//Customer routes
+	require __DIR__ . '/../src/routes/customers.php';
+
+	//Rutas de usuarios
+	require __DIR__ . '/../src/routes/usuarios.php';
+});
+
+// Recursos utiles de la DB
+require __DIR__ . '/../src/routes/utils.php';
+
 
 $app->run();
