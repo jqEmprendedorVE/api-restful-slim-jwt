@@ -1,6 +1,6 @@
 {
     "require": {
         "slim/slim": "^3.0",
-        "php-activerecord/php-activerecord": "^1.1"
+        "jqemprendedorve/php-activerecord": "^1.1"
     }
 }
