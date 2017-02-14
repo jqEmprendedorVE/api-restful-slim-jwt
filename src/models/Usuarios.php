@@ -4,7 +4,7 @@ class Usuarios extends ActiveRecord\Model{
     public static $table_name = 'usuarios';
     public static $primary_key = 'idusuario';
 
-    public function login($usuario,$password){
+    public static function login($usuario,$password){
     	$u = $usuario;
     	$p = md5($password);
 
