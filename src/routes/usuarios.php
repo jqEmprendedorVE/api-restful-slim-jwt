@@ -64,13 +64,9 @@ $app->get('/api/usuario/{cedula}',function(Request $request, Response $response)
 				'idgrupo'=>$u->idgrupo,
 				'mailusuario'=>utf8_decode($u->mailusuario),
 				'nombreusuario'=>$u->nombreusuario,
-				'passwordusuario'=>$u->passwordusuario,
 				'activacion'=>$u->activacion,
-				'confirmado'=>$u->confirmado,
 				'fechaactivo'=>$u->fechaactivo,
 				'permisos'=>$u->permisos,
-				'pass'=>$u->pass,
-				'tmp'=>$u->tmp,
 				'ultimavisita'=>$u->ultimavisita,
 				);
 		}
