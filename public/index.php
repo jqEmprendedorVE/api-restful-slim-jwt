@@ -1,5 +1,7 @@
 <?php
 ini_set('display_errors', 1);
+ini_set('date.timezone', 'America/Caracas');
+
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
