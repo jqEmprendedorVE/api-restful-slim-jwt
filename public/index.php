@@ -17,7 +17,15 @@ $app->group('/api', function () use ($app) {
 
 	//Rutas de usuarios
 	require __DIR__ . '/../src/routes/api/usuarios.php';
+})->add($mw_jwt);
+
+$app->group('/auth', function () use ($app) {
+	// Rutas para hacer login
+	require __DIR__ . '/../src/routes/auth/login.php';
+
+	// TODO: Por hacer validaror login, recovery password, change password
 });
+
 
 // Recursos utiles de la DB
 require __DIR__ . '/../src/routes/utils.php';
