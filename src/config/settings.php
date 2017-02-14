@@ -1,4 +1,7 @@
 <?php
+// constantes
+const KEY = "qd2UtNBu0fVyW4Z2tARCEiLV4je4lclu";
+
 //Agregando configuracion para la conexion de BD
 ActiveRecord\Config::initialize(function($cfg) {
     $cfg->set_model_directory( __DIR__ . '/../../src/models' );
