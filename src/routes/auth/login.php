@@ -26,6 +26,7 @@ $app->post('/login',function(Request $request, Response $response){
         //return JWT::encode($token, $this->key);
 
 		echo json_encode(array(
+			'code'=>0,
 			'success'=>'Usuario validado con nombre: '.$usuario->nombreusuario,
 			'token'=>JWT::encode($token, KEY)
 			));
