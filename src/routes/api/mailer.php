@@ -12,9 +12,6 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 	$to = 'Julio Quintana <jquintana1801@gmail.com>';
 	$text = $p['text'];
 
-	echo $from;
-	//return;
-
 	$mgClient = new Mailgun('key-f76c8e9de1f0a5fbb71d7bd7e3bbc742');
 	$domain = "jqemprendedorve.com";
 
