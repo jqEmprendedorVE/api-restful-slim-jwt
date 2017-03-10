@@ -8,6 +8,8 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 	$accion = $request->getAttribute('accion');
 	$p = $request->getQueryParams();
 	$from = $p['name'].' <'. $p['email'] .'>';
+	$to = 'Julio Quintana <jquintana1801@gmail.com>';
+	$text = $p['text'];
 
 	echo $from;
 	//return;
@@ -18,20 +20,20 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 	$result = array();
 	switch ($accion) {
 		case 'descuento':
-			/*$result = $mgClient->sendMessage($domain, array(
-			    'from'    => $from,
-			    'to'      => 'Julio Quintana <jquintana1801@gmail.com>',
-			    'subject' => 'Gracias, ud ha recibido un 30% en su proximo proyecto',
-			    'text'    => 'Testing some Mailgun awesomness!'
-			));*/
-			break;
-		case 'contactame':
-			$result = array('Mensaje' => 'Datos de prueba');
 			$result = $mgClient->sendMessage($domain, array(
 			    'from'    => $from,
-			    'to'      => 'Julio Quintana <jquintana1801@gmail.com>',
+			    'to'      => $to,
+			    'subject' => 'Gracias, ud ha recibido un 30% en su proximo proyecto',
+			    'text'    => $text
+			));
+			break;
+		case 'contactame':
+			//$result = array('Mensaje' => 'Datos de prueba');
+			$result = $mgClient->sendMessage($domain, array(
+			    'from'    => $from,
+			    'to'      => $to,
 			    'subject' => 'Consulta para jqEmprendedorVE',
-			    'text'    => 'Testing some Mailgun awesomness!'
+			    'text'    => $text
 			));
 			break;		
 	}
