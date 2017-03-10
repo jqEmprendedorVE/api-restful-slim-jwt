@@ -15,23 +15,5 @@ $app->post('/mailer/messages',function(Request $request, Response $response){
 	    'text'    => 'Testing some Mailgun awesomness!'
 	));
 
-	var_dump($result);
-
-	/*$response = array();
-
-	$usuarios = Usuarios::all();
-	foreach ($usuarios as $u) {
-		$response[] = array(
-			'idusuario'=>$u->idusuario,
-			'idgrupo'=>$u->idgrupo,
-			'mailusuario'=>utf8_decode($u->mailusuario),
-			'nombreusuario'=>$u->nombreusuario,
-			'activacion'=>$u->activacion,
-			'fechaactivo'=>$u->fechaactivo,
-			'permisos'=>$u->permisos,
-			'ultimavisita'=>$u->ultimavisita,
-			);
-	}
-
-	echo json_encode($response);*/
+	echo json_encode($result);
 });
