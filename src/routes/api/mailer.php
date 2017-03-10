@@ -7,7 +7,7 @@ use Mailgun\Mailgun;
 $app->post('/mailer/messages/{accion}',function(Request $request, Response $response){
 	$accion = $request->getAttribute('accion');
 	$p = $request->getQueryParams();
-	$from = 'Contacto jqEmprendedorVE <postmaster@jqemprendedorve.com>'
+	$from = 'Contacto jqEmprendedorVE <postmaster@jqemprendedorve.com>';
 	$cc = $p['name'].' <'. $p['email'] .'>';
 	$to = 'Julio Quintana <jquintana1801@gmail.com>';
 	$text = $p['text'];
