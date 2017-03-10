@@ -6,7 +6,7 @@ const KEY = "qd2UtNBu0fVyW4Z2tARCEiLV4je4lclu";
 ActiveRecord\Config::initialize(function($cfg) {
     $cfg->set_model_directory( __DIR__ . '/../../src/models' );
     $cfg->set_connections(array(
-        'development' => 'mysql://sgivestad:SokaStats%1@www.sgiv.org/sgivestad2'
+        'development' => 'mysql://jabonari_user:GkekMUrSTlG4qO@jabonario.com/jabonari_demo?charset=utf8'
     ));
 });
 
@@ -26,7 +26,7 @@ $app->add(function ($req, $res, $next) {
 // Mensaje de bienvenida en el home
 $app->get('/', function ($request, $response) {
     return json_encode(array(
-    	'mensaje'=>'API RESTful de clicSOKA v1'
+    	'mensaje'=>'API RESTful de jqEmprendedorVE v1'
     	));
 });
 
