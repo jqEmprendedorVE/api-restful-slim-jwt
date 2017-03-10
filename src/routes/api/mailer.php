@@ -7,7 +7,8 @@ use Mailgun\Mailgun;
 $app->post('/mailer/messages/{accion}',function(Request $request, Response $response){
 	$accion = $request->getAttribute('accion');
 	$p = $request->getQueryParams();
-	$from = $p['name'].' <'. $p['email'] .'>';
+	$from = 'Contacto jqEmprendedorVE <postmaster@jqemprendedorve.com>'
+	$cc = $p['name'].' <'. $p['email'] .'>';
 	$to = 'Julio Quintana <jquintana1801@gmail.com>';
 	$text = $p['text'];
 
@@ -23,6 +24,7 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 			$result = $mgClient->sendMessage($domain, array(
 			    'from'    => $from,
 			    'to'      => $to,
+			    'cc'	  => $cc,
 			    'subject' => 'Gracias, ud ha recibido un 30% en su proximo proyecto',
 			    'text'    => $text
 			));
@@ -32,6 +34,7 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 			$result = $mgClient->sendMessage($domain, array(
 			    'from'    => $from,
 			    'to'      => $to,
+			    'cc'	  => $cc,
 			    'subject' => 'Consulta para jqEmprendedorVE',
 			    'text'    => $text
 			));
