@@ -256,7 +256,7 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 			    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-spacing: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 5px">
 			      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
 			        <a href="https://twitter.com/jqEmprendedorVE" title="Twitter" target="_blank">
-			          <img src="images/twitter.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: none;height: auto;max-width: 32px !important">
+			          <img src="https://jqemprendedorve-api.herokuapp.com/assets/images/twitter.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: none;height: auto;max-width: 32px !important">
 			        </a>
 			      <div style="line-height:5px;font-size:1px">&nbsp;</div>
 			      </td></tr>
@@ -265,7 +265,7 @@ $app->post('/mailer/messages/{accion}',function(Request $request, Response $resp
 			    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-spacing: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 0">
 			      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
 			        <a href="https://www.linkedin.com/in/jqemprendedorve/" title="LinkedIn" target="_blank">
-			          <img src="images/linkedin@2x.png" alt="LinkedIn" title="LinkedIn" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: none;height: auto;max-width: 32px !important">
+			          <img src="https://jqemprendedorve-api.herokuapp.com/assets/images/linkedin@2x.png" alt="LinkedIn" title="LinkedIn" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: none;height: auto;max-width: 32px !important">
 			        </a>
 			      <div style="line-height:5px;font-size:1px">&nbsp;</div>
 			      </td></tr>
