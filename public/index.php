@@ -12,6 +12,9 @@ $app = new \Slim\App;
 require __DIR__ . '/../src/config/settings.php';
 
 $app->group('/api', function () use ($app) {
+	//Customer mailer
+	require __DIR__ . '/../src/routes/api/mailer.php';
+
 	//Customer routes
 	require __DIR__ . '/../src/routes/api/customers.php';
 
