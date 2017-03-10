@@ -6,7 +6,7 @@ use Mailgun\Mailgun;
 // Obtener todos los clientes
 $app->post('/mailer/messages/{accion}',function(Request $request, Response $response){
 	$accion = $request->getAttribute('accion');
-	$p = $request->getQueryParams();
+	$p = $request->getParsedBody();
 	$from = 'jqEmprendedorVE - Developer FullStack <postmaster@jqemprendedorve.com>';
 	$cc = $p['name'].' <'. $p['email'] .'>';
 	$to = 'Julio Quintana <jquintana1801@gmail.com>';
