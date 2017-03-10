@@ -4,7 +4,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 use Mailgun\Mailgun;
 
 // Obtener todos los clientes
-$app->get('/mailer/messages',function(Request $request, Response $response){
+$app->post('/mailer/messages',function(Request $request, Response $response){
 	$mgClient = new Mailgun('key-f76c8e9de1f0a5fbb71d7bd7e3bbc742');
 	$domain = "jqemprendedorve.com";
 
